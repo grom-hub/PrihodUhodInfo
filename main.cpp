@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 	CurlConnector cc;
 
 
-	std::cout << "-- PRIHOD UHOD INFO v1.0 --\n";
+	std::cout << "-- PRIHOD UHOD INFO v1.1 --\n";
 
 
 	if(!conf.setSettings(cc, checkDelay))
@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
 		std::cin >> cc.myPass;
 	}
 
-	std::cout << "Program is running...\n(Inbox check every " << checkDelay / 1000000 << " second)\n";
+	std::cout << "Program is running...\n";
 
 	while(true)
 	{
