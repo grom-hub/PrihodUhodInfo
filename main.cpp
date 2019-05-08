@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 	CurlConnector cc;
 
 
-	std::cout << "-- PRIHOD UHOD INFO v1.1 --\n";
+	std::cout << "-- PRIHOD UHOD INFO v1.2 --\n";
 
 
 	if(!conf.setSettings(cc, checkDelay))

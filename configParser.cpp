@@ -28,7 +28,7 @@ bool ConfigParser::setSettings(CurlConnector &cc, int &checkDelay)
 
 	try
 	{
-		libconfig::Setting &root = cfg.getRoot()["options"];
+		libconfig::Setting &root = cfg.getRoot()["configuration"];
 
 		if(!(root.lookupValue("ChatId", cc.chatid)
 			&& root.lookupValue("MailURL", cc.mailURL)
@@ -48,7 +48,8 @@ bool ConfigParser::setSettings(CurlConnector &cc, int &checkDelay)
 	}
 	catch(const libconfig::SettingNotFoundException &nfex)
 	{
-		std::cerr << "No 'name' setting in configuration file." << std::endl;
+		std::cerr << "Configuration group not found!" << std::endl;
+		return false;
 	}
 
 	return true;
